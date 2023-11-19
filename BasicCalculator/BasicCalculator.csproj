@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <PackageReference Include="Avalonia" Version="11.0.5"/>
+        <PackageReference Include="Avalonia.Desktop" Version="11.0.5"/>
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.5"/>
+        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.5"/>
+        <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.5"/>
+        <PackageReference Include="communitytoolkit.mvvm" Version="8.2.2" />
+        <PackageReference Include="fluentavaloniaui" Version="2.0.4" />
+        <PackageReference Include="PropertyChanged.SourceGenerator" Version="1.0.8">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <ProjectReference Include="..\CalculatorPrivateAssembly\CalculatorPrivateAssembly.csproj" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <Compile Update="FrmBasicCalculator.axaml.cs">
+        <DependentUpon>FrmBasicCalculator.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <UpToDateCheckInput Remove="Views\FrmBasicCalculator.axaml" />
+    </ItemGroup>
+</Project>

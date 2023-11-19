@@ -1,0 +1,65 @@
+﻿<windowing:AppWindow
+    x:Class="BasicCalculator.FrmBasicCalculator"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:basicCalculator="clr-namespace:BasicCalculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:windowing="clr-namespace:FluentAvalonia.UI.Windowing;assembly=FluentAvalonia"
+    Title="FrmBasicCalculator"
+    Width="400"
+    Height="274"
+    x:DataType="basicCalculator:FrmBasicCalculator"
+    ExtendClientAreaToDecorationsHint="True"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <StackPanel Margin="12" Spacing="12">
+        <TextBlock
+            Margin="0,0,0,12"
+            FontSize="24"
+            FontWeight="Medium"
+            IsHitTestVisible="False"
+            Text="Basic Calculator" />
+        <Grid ColumnDefinitions="*,7,70,7,*">
+            <TextBox
+                Name="TxtNum1"
+                Grid.Column="0"
+                Watermark="Number 1" />
+            <ComboBox
+                Name="CbxOperands"
+                Grid.Column="2"
+                HorizontalAlignment="Center">
+                <ComboBoxItem>+</ComboBoxItem>
+                <ComboBoxItem>-</ComboBoxItem>
+                <ComboBoxItem>*</ComboBoxItem>
+                <ComboBoxItem>/</ComboBoxItem>
+            </ComboBox>
+            <TextBox
+                Name="TxtNum2"
+                Grid.Column="4"
+                Watermark="Number 2" />
+        </Grid>
+        <Button
+            HorizontalAlignment="Stretch"
+            Click="Calculate"
+            Content="Calculate" />
+        <Border
+            Padding="12"
+            Background="{DynamicResource ButtonBackground}"
+            BorderBrush="#9e9e9e"
+            BorderThickness="0,0,0,1"
+            CornerRadius="5">
+            <StackPanel>
+                <TextBlock Foreground="#9d9d9d" Text="Total:" />
+                <TextBlock
+                    Name="TxtTotal"
+                    FontSize="32"
+                    Foreground="White" />
+                <TextBlock
+                    Name="Message"
+                    Foreground="#9d9d9d"
+                    Text="" />
+            </StackPanel>
+        </Border>
+    </StackPanel>
+</windowing:AppWindow>
