@@ -49,7 +49,8 @@ public partial class FrmBasicCalculator : Window
             var validationResult = Validations.IsLesserPrecision(result);
             if (validationResult.IsLesserPrecision)
             {
-                Message.Text = $"Limited to a float precision of {validationResult.Precision} decimal places.";
+                var precision = validationResult.Precision < 0 ? 0 : validationResult.Precision;
+                Message.Text = $"Limited to a float precision of {precision} decimal places.";
             }
             
             TxtTotal.Text = result;
