@@ -6,6 +6,10 @@
         <entry key="BasicCalculator/App.axaml" value="BasicCalculator/BasicCalculator.csproj" />
         <entry key="BasicCalculator/FrmBasicCalculator.axaml" value="BasicCalculator/BasicCalculator.csproj" />
         <entry key="BasicCalculator/Views/FrmBasicCalculator.axaml" value="BasicCalculator/BasicCalculator.csproj" />
+        <entry key="StreamCreation/App.axaml" value="StreamCreation/StreamCreation.csproj" />
+        <entry key="StreamCreation/FrmFileName.axaml" value="StreamCreation/StreamCreation.csproj" />
+        <entry key="StreamCreation/FrmLab1.axaml" value="StreamCreation/StreamCreation.csproj" />
+        <entry key="StreamCreation/FrmRegistration.axaml" value="StreamCreation/StreamCreation.csproj" />
       </map>
     </option>
   </component>

@@ -1,0 +1,27 @@
+﻿<windowing:AppWindow
+    x:Class="StreamCreation.FrmFileName"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:windowing="clr-namespace:FluentAvalonia.UI.Windowing;assembly=FluentAvalonia"
+    Title="FrmFileName"
+    Width="400"
+    Height="300"
+    WindowStartupLocation="CenterOwner"
+    mc:Ignorable="d">
+    <StackPanel
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        Spacing="16">
+        <TextBox
+            Name="txtFileName"
+            Width="200"
+            Watermark="FileName" />
+        <Button
+            Name="btnOkay"
+            HorizontalAlignment="Stretch"
+            Click="BtnOkay_OnClick"
+            Content="Okay" />
+    </StackPanel>
+</windowing:AppWindow>

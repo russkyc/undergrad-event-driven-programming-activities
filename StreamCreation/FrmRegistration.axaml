@@ -1,0 +1,116 @@
+﻿<windowing:AppWindow
+    x:Class="StreamCreation.FrmRegistration"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:HeroIconsAvalonia.Controls;assembly=HeroIconsAvalonia"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:windowing="clr-namespace:FluentAvalonia.UI.Windowing;assembly=FluentAvalonia"
+    Title="FrmRegistration"
+    Width="500"
+    Height="410"
+    ExtendClientAreaToDecorationsHint="True"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <StackPanel Margin="16" Spacing="16">
+        <TextBlock
+            FontSize="24"
+            FontWeight="Medium"
+            Text="Registration" />
+        <Grid Margin="0,12,0,0" ColumnDefinitions="*,12,*">
+            <StackPanel Grid.Column="0" Spacing="8">
+                <StackPanel Spacing="6">
+                    <TextBlock Text="Student No" />
+                    <TextBox
+                        Name="txtStudentNo"
+                        MaxLength="11"
+                        TabIndex="0" />
+                </StackPanel>
+                <StackPanel Spacing="6">
+                    <TextBlock Text="Last Name" />
+                    <TextBox
+                        Name="txtLastName"
+                        MaxLength="35"
+                        TabIndex="2" />
+                </StackPanel>
+                <StackPanel Spacing="6">
+                    <TextBlock Text="Age" />
+                    <TextBox
+                        Name="TxtAge"
+                        Width="120"
+                        HorizontalAlignment="Left"
+                        MaxLength="3"
+                        TabIndex="5" />
+                </StackPanel>
+                <StackPanel Spacing="6">
+                    <TextBlock Text="Birthday" />
+                    <CalendarDatePicker Name="dateBirthDay" TabIndex="7" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Column="2" Spacing="8">
+                <StackPanel Spacing="6">
+                    <TextBlock Text="Program" />
+                    <ComboBox
+                        Name="selProgram"
+                        HorizontalAlignment="Stretch"
+                        TabIndex="1">
+                        <ComboBoxItem>Bachelor of Science in Information Technology</ComboBoxItem>
+                        <ComboBoxItem>Bachelor of Science in Computer Science</ComboBoxItem>
+                        <ComboBoxItem>Bachelor of Science in Computer Engineering</ComboBoxItem>
+                        <ComboBoxItem>Bachelor of Science in Business Administration</ComboBoxItem>
+                        <ComboBoxItem>Bachelor of Science in Accounting Information System</ComboBoxItem>
+                        <ComboBoxItem>Bachelor of Science in Hospitality Management</ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+                <Grid ColumnDefinitions="2*,12,*">
+                    <StackPanel Grid.Column="0" Spacing="6">
+                        <TextBlock Text="First Name" />
+                        <TextBox
+                            Name="txtFirstName"
+                            MaxLength="35"
+                            TabIndex="3" />
+                    </StackPanel>
+                    <StackPanel Grid.Column="2" Spacing="6">
+                        <TextBlock Text="M.I." />
+                        <TextBox
+                            Name="txtMi"
+                            MaxLength="3"
+                            TabIndex="4" />
+                    </StackPanel>
+                </Grid>
+                <StackPanel Spacing="6">
+                    <TextBlock Text="Gender" />
+                    <ComboBox
+                        Name="selGender"
+                        Width="120"
+                        TabIndex="6">
+                        <ComboBoxItem>Male</ComboBoxItem>
+                        <ComboBoxItem>Female</ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Spacing="6">
+                    <TextBlock Text="Contact No" />
+                    <TextBox
+                        Name="txtContactNo"
+                        MaxLength="11"
+                        TabIndex="8" />
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+        <Button
+            Name="btnRegister"
+            HorizontalAlignment="Center"
+            Click="BtnRegister_OnClick"
+            TabIndex="9">
+            <StackPanel Orientation="Horizontal" Spacing="4">
+                <controls:HeroIcon
+                    Width="14"
+                    VerticalAlignment="Center"
+                    Foreground="White"
+                    Kind="Outline"
+                    Type="PlusCircle" />
+                <TextBlock VerticalAlignment="Center" Text="Register" />
+            </StackPanel>
+        </Button>
+    </StackPanel>
+</windowing:AppWindow>

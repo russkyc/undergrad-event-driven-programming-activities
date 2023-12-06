@@ -1,0 +1,30 @@
+﻿<windowing:AppWindow
+    x:Class="StreamCreation.FrmLab1"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:windowing="clr-namespace:FluentAvalonia.UI.Windowing;assembly=FluentAvalonia"
+    Title="FrmLab1"
+    Width="550"
+    Height="350"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <StackPanel
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        Spacing="16">
+        <TextBox
+            Name="txtInput"
+            Width="400"
+            Height="100"
+            AcceptsReturn="True"
+            AcceptsTab="True"
+            Watermark="Content" />
+        <Button
+            Name="btnCreate"
+            HorizontalAlignment="Stretch"
+            Click="BtnCreate_OnClick"
+            Content="Create" />
+    </StackPanel>
+</windowing:AppWindow>
